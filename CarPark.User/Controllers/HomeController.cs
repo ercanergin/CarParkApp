@@ -43,6 +43,9 @@ namespace CarPark.User.Controllers
 
             //_logger.LogError("Customerda bir hata oluştu {@customer}", customer);
 
+            var client = new MongoClient("mongodb+srv://.vw5n8.mongodb.net/CarParkDB?retryWrites=true&w=majority");
+            var database = client.GetDatabase("CarParkDB");
+            var collection = database.GetCollection<Test>("Test");
 
             var database = _client.GetDatabase("CarParkDB");
 
