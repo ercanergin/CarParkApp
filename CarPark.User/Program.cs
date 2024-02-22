@@ -1,9 +1,13 @@
+using CarPark.Core.Repository.Abstract;
+using CarPark.Core.Settings;
+using CarPark.DataAccess.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Options;
 using Serilog;
 using Serilog.Events;
 using Serilog.Formatting.Json;
+using System.Configuration;
 using System.Globalization;
 
 Log.Logger = new LoggerConfiguration()
@@ -25,6 +29,8 @@ builder.Services.AddLocalization(opt => { opt.ResourcesPath = "Resources"; });
 
 builder.Services.AddMvc()
     .AddDataAnnotationsLocalization();
+//bunlarý test için ekledik sonrasýnda sileceðiz.Hiçbir zaman user katmaný core ve business katmanýna eriþemez direk.
+builder.Services.AddScoped(typeof(IRepository<>), typeof(MongoRepositoryBase<>));
 
 builder.Services.Configure<RequestLocalizationOptions>(opt =>
 {
