@@ -21,7 +21,7 @@ namespace CarPark.User.Controllers
         {
             _logger = logger;
             _localizer = localizer;
-            _client = new MongoClient("mongodb+srv://eergin:@carparkcluster.vw5n8.mongodb.net/CarParkDB?retryWrites=true&w=majority");
+            _client = new MongoClient("mongodb+srv://eergin:Ercoergin25@carparkcluster.vw5n8.mongodb.net/CarParkDB?retryWrites=true&w=majority");
         }
 
         public IActionResult Index()

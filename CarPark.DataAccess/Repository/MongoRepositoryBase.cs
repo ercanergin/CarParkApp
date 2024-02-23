@@ -30,7 +30,7 @@ namespace CarPark.DataAccess.Repository
         /// Bütün listeyi dönen senkron metod
         /// </summary>
         /// <returns></returns>
-        public GetManyResult<TEntity> AsQueryable()
+        public GetManyResult<TEntity> GetAll()
         {
             var result = new GetManyResult<TEntity>();
 
@@ -52,7 +52,7 @@ namespace CarPark.DataAccess.Repository
         /// Bütün listeyi dönen Asenkron metod 
         /// </summary>
         /// <returns></returns>
-        public async Task<GetManyResult<TEntity>> AsQueryableAsync()
+        public async Task<GetManyResult<TEntity>> GetAllAsync()
         {
             var result = new GetManyResult<TEntity>();
 

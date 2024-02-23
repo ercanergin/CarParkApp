@@ -1,5 +1,9 @@
+using CarPark.Business.Abstract;
+using CarPark.Business.Concrete;
 using CarPark.Core.Repository.Abstract;
 using CarPark.Core.Settings;
+using CarPark.DataAccess.Abstract;
+using CarPark.DataAccess.Concrete;
 using CarPark.DataAccess.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Localization;
@@ -31,6 +35,9 @@ builder.Services.AddMvc()
     .AddDataAnnotationsLocalization();
 //bunlarý test için ekledik sonrasýnda sileceðiz.Hiçbir zaman user katmaný core ve business katmanýna eriþemez direk.
 builder.Services.AddScoped(typeof(IRepository<>), typeof(MongoRepositoryBase<>));
+//IPersonelDataAccess inject ettiðimde sen bana PersonelDataAccess new le demek.
+builder.Services.AddScoped<IPersonelDataAccess, PersonelDataAccess>();
+builder.Services.AddScoped<IPersonelService, PersonelManager>();
 
 builder.Services.Configure<RequestLocalizationOptions>(opt =>
 {

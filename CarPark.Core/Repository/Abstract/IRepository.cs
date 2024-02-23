@@ -13,8 +13,8 @@ namespace CarPark.Core.Repository.Abstract
     /// </summary>
     public interface IRepository<TEntity> where TEntity : class, new()
     {
-        GetManyResult<TEntity> AsQueryable();
-        Task<GetManyResult<TEntity>> AsQueryableAsync();
+        GetManyResult<TEntity> GetAll();
+        Task<GetManyResult<TEntity>> GetAllAsync();
         GetManyResult<TEntity> FilterBy(Expression<Func<TEntity, bool>> filter); //lambda expressionlar gibi. (x=>x.Name=="Ercan")
         Task<GetManyResult<TEntity>> FilterByAsync(Expression<Func<TEntity, bool>> filter);
         GetOneResult<TEntity> GetById(string id);//id li işlem
