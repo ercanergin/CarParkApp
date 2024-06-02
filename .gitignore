@@ -361,3 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/CarPark.User/Controllers/PersonelsController.cs
+/CarPark.sln
+/CarPark.User/CarPark.User.csproj

@@ -610,3 +610,210 @@ System.InvalidOperationException: The view 'Index' was not found. The following 
 2024-01-13 12:05:47.871 +03:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\ercan\source\repos\CarPark\CarPark.User\wwwroot\favicon.ico'
 2024-01-13 12:05:47.872 +03:00 [INF] HTTP GET /favicon.ico responded 200 in 8.0475 ms
 2024-01-13 12:05:47.874 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5224/favicon.ico - - - 200 5430 image/x-icon 10.5560ms
+2024-06-02 22:08:22.827 +03:00 [INF] User profile is available. Using 'C:\Users\ercan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-02 22:08:23.046 +03:00 [INF] Creating key {cc40e1b0-13be-4f6d-b1de-f9fe054811c4} with creation date 2024-06-02 19:08:23Z, activation date 2024-06-02 19:08:22Z, and expiration date 2024-08-31 19:08:22Z.
+2024-06-02 22:08:23.068 +03:00 [INF] Writing data to file 'C:\Users\ercan\AppData\Local\ASP.NET\DataProtection-Keys\key-cc40e1b0-13be-4f6d-b1de-f9fe054811c4.xml'.
+2024-06-02 22:08:23.359 +03:00 [INF] Now listening on: http://localhost:5224
+2024-06-02 22:08:23.367 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-02 22:08:23.369 +03:00 [INF] Hosting environment: Development
+2024-06-02 22:08:23.370 +03:00 [INF] Content root path: C:\Users\ercan\source\repos\CarPark\CarPark.User\
+2024-06-02 22:08:23.771 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5224/ - -
+2024-06-02 22:08:23.967 +03:00 [INF] Executing endpoint 'CarPark.User.Controllers.HomeController.Index (CarPark.User)'
+2024-06-02 22:08:24.013 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller CarPark.User.Controllers.HomeController (CarPark.User).
+2024-06-02 22:08:58.092 +03:00 [INF] Executed action CarPark.User.Controllers.HomeController.Index (CarPark.User) in 34062.4873ms
+2024-06-02 22:08:58.096 +03:00 [INF] Executed endpoint 'CarPark.User.Controllers.HomeController.Index (CarPark.User)'
+2024-06-02 22:08:58.101 +03:00 [ERR] HTTP GET / responded 500 in 34169.6554 ms
+System.ArgumentException: '.vw5n8.mongodb.net' is not a legal name, found leading root label. (Parameter 'query')
+   at DnsClient.DnsString.Parse(String query)
+   at MongoDB.Driver.Core.Misc.DnsClientWrapper.ResolveTxtRecords(String domainName, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Configuration.ConnectionString.Resolve(Boolean resolveHosts, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoUrl.Resolve(Boolean resolveHosts, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClientSettings.FromUrl(MongoUrl url)
+   at MongoDB.Driver.MongoClient..ctor(String connectionString)
+   at CarPark.User.Controllers.HomeController.Index() in C:\Users\ercan\source\repos\CarPark\CarPark.User\Controllers\HomeController.cs:line 46
+   at lambda_method1(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2024-06-02 22:08:58.246 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: '.vw5n8.mongodb.net' is not a legal name, found leading root label. (Parameter 'query')
+   at DnsClient.DnsString.Parse(String query)
+   at MongoDB.Driver.Core.Misc.DnsClientWrapper.ResolveTxtRecords(String domainName, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Configuration.ConnectionString.Resolve(Boolean resolveHosts, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoUrl.Resolve(Boolean resolveHosts, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClientSettings.FromUrl(MongoUrl url)
+   at MongoDB.Driver.MongoClient..ctor(String connectionString)
+   at CarPark.User.Controllers.HomeController.Index() in C:\Users\ercan\source\repos\CarPark\CarPark.User\Controllers\HomeController.cs:line 46
+   at lambda_method1(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-06-02 22:08:58.369 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5224/ - - - 500 - text/html;+charset=utf-8 34604.1687ms
+2024-06-02 22:08:58.378 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5224/_framework/aspnetcore-browser-refresh.js - -
+2024-06-02 22:08:58.383 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5224/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 5.0439ms
+2024-06-02 22:08:58.414 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5224/_vs/browserLink - -
+2024-06-02 22:08:58.504 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5224/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 89.7508ms
+2024-06-02 22:08:58.523 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5224/favicon.ico - -
+2024-06-02 22:08:58.546 +03:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\ercan\source\repos\CarPark\CarPark.User\wwwroot\favicon.ico'
+2024-06-02 22:08:58.547 +03:00 [INF] HTTP GET /favicon.ico responded 200 in 23.3013 ms
+2024-06-02 22:08:58.549 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5224/favicon.ico - - - 200 5430 image/x-icon 26.3910ms
+2024-06-02 22:16:07.540 +03:00 [INF] User profile is available. Using 'C:\Users\ercan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-02 22:16:07.709 +03:00 [INF] Now listening on: http://localhost:5224
+2024-06-02 22:16:07.713 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-02 22:16:07.714 +03:00 [INF] Hosting environment: Development
+2024-06-02 22:16:07.715 +03:00 [INF] Content root path: C:\Users\ercan\source\repos\CarPark\CarPark.User\
+2024-06-02 22:16:07.984 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5224/ - -
+2024-06-02 22:16:08.058 +03:00 [INF] Executing endpoint 'CarPark.User.Controllers.HomeController.Index (CarPark.User)'
+2024-06-02 22:16:08.086 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller CarPark.User.Controllers.HomeController (CarPark.User).
+2024-06-02 22:16:13.612 +03:00 [INF] Executing ViewResult, running view Index.
+2024-06-02 22:16:13.674 +03:00 [INF] Executed ViewResult - view Index executed in 61.5956ms.
+2024-06-02 22:16:13.680 +03:00 [INF] Executed action CarPark.User.Controllers.HomeController.Index (CarPark.User) in 5591.6539ms
+2024-06-02 22:16:13.682 +03:00 [INF] Executed endpoint 'CarPark.User.Controllers.HomeController.Index (CarPark.User)'
+2024-06-02 22:16:13.704 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5224/assets/img/avatar/1.jpg - -
+2024-06-02 22:16:13.706 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5224/assets/css/app.min.css - -
+2024-06-02 22:16:13.706 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5224/assets/css/core.min.css - -
+2024-06-02 22:16:13.706 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5224/assets/css/style.min.css - -
+2024-06-02 22:16:13.710 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5224/assets/img/avatar/2.jpg - -
+2024-06-02 22:16:13.712 +03:00 [INF] HTTP GET / responded 200 in 5659.2319 ms
+2024-06-02 22:16:13.731 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5224/ - - - 200 - text/html;+charset=utf-8 5745.7222ms
+2024-06-02 22:16:13.751 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5224/assets/js/core.min.js - -
+2024-06-02 22:16:13.752 +03:00 [INF] Sending file. Request path: '/assets/css/style.min.css'. Physical path: 'C:\Users\ercan\source\repos\CarPark\CarPark.User\wwwroot\assets\css\style.min.css'
+2024-06-02 22:16:13.752 +03:00 [INF] Sending file. Request path: '/assets/img/avatar/1.jpg'. Physical path: 'C:\Users\ercan\source\repos\CarPark\CarPark.User\wwwroot\assets\img\avatar\1.jpg'
+2024-06-02 22:16:13.752 +03:00 [INF] Sending file. Request path: '/assets/css/app.min.css'. Physical path: 'C:\Users\ercan\source\repos\CarPark\CarPark.User\wwwroot\assets\css\app.min.css'
+2024-06-02 22:16:13.752 +03:00 [INF] Sending file. Request path: '/assets/img/avatar/2.jpg'. Physical path: 'C:\Users\ercan\source\repos\CarPark\CarPark.User\wwwroot\assets\img\avatar\2.jpg'
+2024-06-02 22:16:13.752 +03:00 [INF] Sending file. Request path: '/assets/css/core.min.css'. Physical path: 'C:\Users\ercan\source\repos\CarPark\CarPark.User\wwwroot\assets\css\core.min.css'
+2024-06-02 22:16:13.753 +03:00 [INF] HTTP GET /assets/css/style.min.css responded 200 in 40.4559 ms
+2024-06-02 22:16:13.754 +03:00 [INF] HTTP GET /assets/img/avatar/1.jpg responded 200 in 43.0168 ms
+2024-06-02 22:16:13.757 +03:00 [INF] HTTP GET /assets/img/avatar/2.jpg responded 200 in 43.5601 ms
+2024-06-02 22:16:13.757 +03:00 [INF] HTTP GET /assets/css/app.min.css responded 200 in 45.4258 ms
+2024-06-02 22:16:13.758 +03:00 [INF] HTTP GET /assets/css/core.min.css responded 200 in 46.1240 ms
+2024-06-02 22:16:13.760 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5224/assets/css/style.min.css - - - 200 4986 text/css 53.7194ms
+2024-06-02 22:16:13.761 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5224/assets/img/avatar/1.jpg - - - 200 3150 image/jpeg 58.0030ms
+2024-06-02 22:16:13.762 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5224/assets/img/avatar/2.jpg - - - 200 3150 image/jpeg 51.8927ms
+2024-06-02 22:16:13.764 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5224/assets/css/app.min.css - - - 200 419738 text/css 57.9223ms
+2024-06-02 22:16:13.765 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5224/assets/css/core.min.css - - - 200 232024 text/css 58.9325ms
+2024-06-02 22:16:13.766 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5224/assets/img/avatar/4.jpg - -
+2024-06-02 22:16:13.767 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5224/assets/img/avatar/3.jpg - -
+2024-06-02 22:16:13.767 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5224/assets/js/app.min.js - -
+2024-06-02 22:16:13.768 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5224/_framework/aspnetcore-browser-refresh.js - -
+2024-06-02 22:16:13.771 +03:00 [INF] Sending file. Request path: '/assets/img/avatar/4.jpg'. Physical path: 'C:\Users\ercan\source\repos\CarPark\CarPark.User\wwwroot\assets\img\avatar\4.jpg'
+2024-06-02 22:16:13.772 +03:00 [INF] Sending file. Request path: '/assets/img/avatar/3.jpg'. Physical path: 'C:\Users\ercan\source\repos\CarPark\CarPark.User\wwwroot\assets\img\avatar\3.jpg'
+2024-06-02 22:16:13.768 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5224/assets/js/script.min.js - -
+2024-06-02 22:16:13.774 +03:00 [INF] HTTP GET /assets/img/avatar/4.jpg responded 200 in 5.0178 ms
+2024-06-02 22:16:13.775 +03:00 [INF] HTTP GET /assets/img/avatar/3.jpg responded 200 in 5.4108 ms
+2024-06-02 22:16:13.777 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5224/assets/img/avatar/4.jpg - - - 200 3150 image/jpeg 10.9812ms
+2024-06-02 22:16:13.780 +03:00 [INF] Sending file. Request path: '/assets/js/script.min.js'. Physical path: 'C:\Users\ercan\source\repos\CarPark\CarPark.User\wwwroot\assets\js\script.min.js'
+2024-06-02 22:16:13.777 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5224/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 8.5237ms
+2024-06-02 22:16:13.780 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5224/assets/img/avatar/3.jpg - - - 200 3150 image/jpeg 12.9556ms
+2024-06-02 22:16:13.780 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5224/assets/img/avatar/5.jpg - -
+2024-06-02 22:16:13.782 +03:00 [INF] HTTP GET /assets/js/script.min.js responded 200 in 5.9189 ms
+2024-06-02 22:16:13.783 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5224/_vs/browserLink - -
+2024-06-02 22:16:13.786 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5224/assets/js/script.min.js - - - 200 5414 application/javascript 17.3975ms
+2024-06-02 22:16:13.786 +03:00 [INF] Sending file. Request path: '/assets/img/avatar/5.jpg'. Physical path: 'C:\Users\ercan\source\repos\CarPark\CarPark.User\wwwroot\assets\img\avatar\5.jpg'
+2024-06-02 22:16:13.789 +03:00 [INF] HTTP GET /assets/img/avatar/5.jpg responded 200 in 5.0374 ms
+2024-06-02 22:16:13.790 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5224/assets/img/avatar/5.jpg - - - 200 3150 image/jpeg 9.8493ms
+2024-06-02 22:16:13.800 +03:00 [INF] Sending file. Request path: '/assets/js/app.min.js'. Physical path: 'C:\Users\ercan\source\repos\CarPark\CarPark.User\wwwroot\assets\js\app.min.js'
+2024-06-02 22:16:13.803 +03:00 [INF] HTTP GET /assets/js/app.min.js responded 200 in 32.2858 ms
+2024-06-02 22:16:13.805 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5224/assets/js/app.min.js - - - 200 62609 application/javascript 37.6188ms
+2024-06-02 22:16:13.805 +03:00 [INF] Sending file. Request path: '/assets/js/core.min.js'. Physical path: 'C:\Users\ercan\source\repos\CarPark\CarPark.User\wwwroot\assets\js\core.min.js'
+2024-06-02 22:16:13.807 +03:00 [INF] HTTP GET /assets/js/core.min.js responded 200 in 54.9091 ms
+2024-06-02 22:16:13.809 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5224/assets/js/core.min.js - - - 200 232324 application/javascript 57.7524ms
+2024-06-02 22:16:13.842 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5224/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 58.9568ms
+2024-06-02 22:16:13.876 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5224/assets/fonts/fontawesome-webfont.woff2?v=4.7.0 - -
+2024-06-02 22:16:13.876 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5224/assets/fonts/themify.woff?-fvbane - -
+2024-06-02 22:16:13.888 +03:00 [INF] HTTP GET /assets/fonts/fontawesome-webfont.woff2 responded 404 in 9.7336 ms
+2024-06-02 22:16:13.891 +03:00 [INF] Sending file. Request path: '/assets/fonts/themify.woff'. Physical path: 'C:\Users\ercan\source\repos\CarPark\CarPark.User\wwwroot\assets\fonts\themify.woff'
+2024-06-02 22:16:13.891 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5224/assets/fonts/fontawesome-webfont.woff2?v=4.7.0 - - - 404 0 - 15.2035ms
+2024-06-02 22:16:13.892 +03:00 [INF] HTTP GET /assets/fonts/themify.woff responded 200 in 13.4974 ms
+2024-06-02 22:16:13.895 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5224/assets/fonts/themify.woff?-fvbane - - - 200 56108 application/font-woff 18.0374ms
+2024-06-02 22:16:13.916 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5224/assets/fonts/fontawesome-webfont.woff?v=4.7.0 - -
+2024-06-02 22:16:13.916 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5224/assets/vendor/material-icons/css/material-icons.css - -
+2024-06-02 22:16:13.916 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5224/assets/vendor/typeahead/bloodhound.min.js - -
+2024-06-02 22:16:13.916 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5224/assets/vendor/typeahead/typeahead.jquery.min.js - -
+2024-06-02 22:16:13.916 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5224/assets/vendor/i8-icon/jquery-i8-icon.min.js - -
+2024-06-02 22:16:13.916 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5224/assets/vendor/screenfull/screenfull.min.js - -
+2024-06-02 22:16:13.919 +03:00 [INF] HTTP GET /assets/fonts/fontawesome-webfont.woff responded 404 in 1.1356 ms
+2024-06-02 22:16:13.922 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5224/assets/fonts/fontawesome-webfont.woff?v=4.7.0 - - - 404 0 - 6.0065ms
+2024-06-02 22:16:13.923 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5224/assets/vendor/typed.js/typed.min.js - -
+2024-06-02 22:16:13.927 +03:00 [INF] Sending file. Request path: '/assets/vendor/material-icons/css/material-icons.css'. Physical path: 'C:\Users\ercan\source\repos\CarPark\CarPark.User\wwwroot\assets\vendor\material-icons\css\material-icons.css'
+2024-06-02 22:16:13.928 +03:00 [INF] HTTP GET /assets/vendor/material-icons/css/material-icons.css responded 200 in 10.1363 ms
+2024-06-02 22:16:13.930 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5224/assets/vendor/material-icons/css/material-icons.css - - - 200 1053 text/css 13.7388ms
+2024-06-02 22:16:13.930 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5224/assets/fonts/fontawesome-webfont.ttf?v=4.7.0 - -
+2024-06-02 22:16:13.934 +03:00 [INF] HTTP GET /assets/fonts/fontawesome-webfont.ttf responded 404 in 0.4907 ms
+2024-06-02 22:16:13.937 +03:00 [INF] Sending file. Request path: '/assets/vendor/screenfull/screenfull.min.js'. Physical path: 'C:\Users\ercan\source\repos\CarPark\CarPark.User\wwwroot\assets\vendor\screenfull\screenfull.min.js'
+2024-06-02 22:16:13.937 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5224/assets/fonts/fontawesome-webfont.ttf?v=4.7.0 - - - 404 0 - 6.6852ms
+2024-06-02 22:16:13.939 +03:00 [INF] HTTP GET /assets/vendor/screenfull/screenfull.min.js responded 200 in 18.1421 ms
+2024-06-02 22:16:13.940 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5224/assets/vendor/material-icons/fonts/MaterialIcons-Regular.woff2 - -
+2024-06-02 22:16:13.941 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5224/assets/vendor/screenfull/screenfull.min.js - - - 200 2002 application/javascript 24.5361ms
+2024-06-02 22:16:13.945 +03:00 [INF] Sending file. Request path: '/assets/vendor/typeahead/bloodhound.min.js'. Physical path: 'C:\Users\ercan\source\repos\CarPark\CarPark.User\wwwroot\assets\vendor\typeahead\bloodhound.min.js'
+2024-06-02 22:16:13.948 +03:00 [INF] HTTP GET /assets/vendor/typeahead/bloodhound.min.js responded 200 in 28.6064 ms
+2024-06-02 22:16:13.950 +03:00 [INF] Sending file. Request path: '/assets/vendor/typeahead/typeahead.jquery.min.js'. Physical path: 'C:\Users\ercan\source\repos\CarPark\CarPark.User\wwwroot\assets\vendor\typeahead\typeahead.jquery.min.js'
+2024-06-02 22:16:13.952 +03:00 [INF] Sending file. Request path: '/assets/vendor/material-icons/fonts/MaterialIcons-Regular.woff2'. Physical path: 'C:\Users\ercan\source\repos\CarPark\CarPark.User\wwwroot\assets\vendor\material-icons\fonts\MaterialIcons-Regular.woff2'
+2024-06-02 22:16:13.948 +03:00 [INF] Sending file. Request path: '/assets/vendor/i8-icon/jquery-i8-icon.min.js'. Physical path: 'C:\Users\ercan\source\repos\CarPark\CarPark.User\wwwroot\assets\vendor\i8-icon\jquery-i8-icon.min.js'
+2024-06-02 22:16:13.953 +03:00 [INF] Sending file. Request path: '/assets/vendor/typed.js/typed.min.js'. Physical path: 'C:\Users\ercan\source\repos\CarPark\CarPark.User\wwwroot\assets\vendor\typed.js\typed.min.js'
+2024-06-02 22:16:13.954 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5224/assets/vendor/typeahead/bloodhound.min.js - - - 200 12998 application/javascript 38.2176ms
+2024-06-02 22:16:13.955 +03:00 [INF] HTTP GET /assets/vendor/typeahead/typeahead.jquery.min.js responded 200 in 35.9793 ms
+2024-06-02 22:16:13.956 +03:00 [INF] HTTP GET /assets/vendor/material-icons/fonts/MaterialIcons-Regular.woff2 responded 200 in 14.8514 ms
+2024-06-02 22:16:13.957 +03:00 [INF] HTTP GET /assets/vendor/i8-icon/jquery-i8-icon.min.js responded 200 in 37.1863 ms
+2024-06-02 22:16:13.959 +03:00 [INF] HTTP GET /assets/vendor/typed.js/typed.min.js responded 200 in 34.5868 ms
+2024-06-02 22:16:13.961 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5224/assets/vendor/typeahead/typeahead.jquery.min.js - - - 200 26900 application/javascript 44.2133ms
+2024-06-02 22:16:13.962 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5224/assets/vendor/material-icons/fonts/MaterialIcons-Regular.woff2 - - - 200 44300 font/woff2 21.9205ms
+2024-06-02 22:16:13.963 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5224/assets/vendor/i8-icon/jquery-i8-icon.min.js - - - 200 20992 application/javascript 46.6528ms
+2024-06-02 22:16:13.964 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5224/assets/vendor/typed.js/typed.min.js - - - 200 11700 application/javascript 40.9665ms
+2024-06-02 22:16:13.967 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5224/assets/data/json/files.json - -
+2024-06-02 22:16:13.968 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5224/assets/vendor/i8-icon/i8-color-icons.svg - -
+2024-06-02 22:16:13.978 +03:00 [INF] Sending file. Request path: '/assets/data/json/files.json'. Physical path: 'C:\Users\ercan\source\repos\CarPark\CarPark.User\wwwroot\assets\data\json\files.json'
+2024-06-02 22:16:13.980 +03:00 [INF] HTTP GET /assets/data/json/files.json responded 200 in 11.7903 ms
+2024-06-02 22:16:13.980 +03:00 [INF] Sending file. Request path: '/assets/vendor/i8-icon/i8-color-icons.svg'. Physical path: 'C:\Users\ercan\source\repos\CarPark\CarPark.User\wwwroot\assets\vendor\i8-icon\i8-color-icons.svg'
+2024-06-02 22:16:13.982 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5224/assets/data/json/files.json - - - 200 25942 application/json 15.0184ms
+2024-06-02 22:16:13.983 +03:00 [INF] HTTP GET /assets/vendor/i8-icon/i8-color-icons.svg responded 200 in 14.7616 ms
+2024-06-02 22:16:13.986 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5224/assets/vendor/i8-icon/i8-color-icons.svg - - - 200 191368 image/svg+xml 17.9560ms
+2024-06-02 22:16:14.027 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5224/assets/img/favicon.png - -
+2024-06-02 22:16:14.036 +03:00 [INF] Sending file. Request path: '/assets/img/favicon.png'. Physical path: 'C:\Users\ercan\source\repos\CarPark\CarPark.User\wwwroot\assets\img\favicon.png'
+2024-06-02 22:16:14.037 +03:00 [INF] HTTP GET /assets/img/favicon.png responded 200 in 9.7504 ms
+2024-06-02 22:16:14.039 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5224/assets/img/favicon.png - - - 200 666 image/png 11.8221ms
+2024-06-02 22:16:32.008 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5224/dashboard/index.html - -
+2024-06-02 22:16:32.012 +03:00 [INF] HTTP GET /dashboard/index.html responded 404 in 0.5850 ms
+2024-06-02 22:16:32.014 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5224/dashboard/index.html - - - 404 0 - 5.6701ms
+2024-06-02 22:16:33.339 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5224/_framework/aspnetcore-browser-refresh.js - -
+2024-06-02 22:16:33.341 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5224/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 1.3211ms
+2024-06-02 22:16:41.017 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5224/index.html - -
+2024-06-02 22:16:41.021 +03:00 [INF] HTTP GET /index.html responded 404 in 0.4656 ms
+2024-06-02 22:16:41.023 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5224/index.html - - - 404 0 - 5.5521ms
+2024-06-02 22:16:42.142 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5224/_framework/aspnetcore-browser-refresh.js - -
+2024-06-02 22:16:42.143 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5224/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 1.2034ms
