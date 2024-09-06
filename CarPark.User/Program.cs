@@ -1,16 +1,15 @@
+using AspNetCore.Identity.MongoDbCore.Models;
 using CarPark.Business.Abstract;
 using CarPark.Business.Concrete;
 using CarPark.Core.Repository.Abstract;
-using CarPark.Core.Settings;
 using CarPark.DataAccess.Abstract;
 using CarPark.DataAccess.Concrete;
 using CarPark.DataAccess.Repository;
-using Microsoft.AspNetCore.Builder;
+using CarPark.Entities.Concrete;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Options;
 using Serilog;
-using Serilog.Events;
-using Serilog.Formatting.Json;
 using System.Configuration;
 using System.Globalization;
 
@@ -33,6 +32,13 @@ builder.Services.AddLocalization(opt => { opt.ResourcesPath = "Resources"; });
 
 builder.Services.AddMvc()
     .AddDataAnnotationsLocalization();
+
+builder.Services.AddAuthentication(option =>
+{
+    option.DefaultScheme = IdentityConstants.ApplicationScheme;
+    option.DefaultSignInScheme = IdentityConstants.ExternalScheme;
+});
+
 //bunlarý test için ekledik sonrasýnda sileceðiz.Hiçbir zaman user katmaný core ve business katmanýna eriþemez direk.
 builder.Services.AddScoped(typeof(IRepository<>), typeof(MongoRepositoryBase<>));
 //IPersonelDataAccess inject ettiðimde sen bana PersonelDataAccess new le demek.
@@ -63,6 +69,24 @@ builder.Services.Configure<RequestLocalizationOptions>(opt =>
 
 var app = builder.Build();
 
+//builder.Services.AddIdentityCore<Personel>(option =>
+//{
+
+//})
+//    .AddRoles<MongoIdentityRole>()
+//    .AddMongoDbStores<Personel, MongoIdentityRole, Guid>(app.Configuration.GetSection("MongoConnection:ConnectionString").Value, app.Configuration.GetSection("MongoConnection:Database").Value)
+//    .AddSignInManager()
+//    .AddDefaultTokenProviders();
+
+//builder.Services.ConfigureApplicationCookie(option =>
+//{
+//    option.Cookie.HttpOnly = true;
+//    option.ExpireTimeSpan = TimeSpan.FromMinutes(5);
+
+//    option.LoginPath = "/Account/Login";
+//    option.SlidingExpiration = true;
+//});
+
 //app.MapGet("/", () => "Hello World!");
 
 app.UseSerilogRequestLogging();
@@ -76,6 +100,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 var options = ((IApplicationBuilder)app).ApplicationServices.GetRequiredService<IOptions<RequestLocalizationOptions>>();

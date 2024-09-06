@@ -1,5 +1,7 @@
-﻿using MongoDB.Bson;
+﻿using AspNetCore.Identity.MongoDbCore.Models;
+using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using MongoDbGenericRepository.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,15 +11,14 @@ using System.Threading.Tasks;
 namespace CarPark.Entities.Concrete
 {
     //Concrete: Somut nesneleri ifade eder.
-    public class Personel : BaseModel
+    [CollectionName("Personel")]
+    public class Personel : MongoIdentityUser
     {
-        public string UserName { get; set; }
-        public string Email { get; set; }
-        public string Password { get; set; }
-        /// <summary>
-        /// personel role yetkileri, admin, süper admin vb.
-        /// </summary>
-        public string[] Roles { get; set; }
+        public Personel()
+        {
+            CreatedDate = DateTime.Now;
+            Status = 1;
+        }
         public PersonelContact PersonelContact { get; set; }
         public ICollection<Address> Addresses { get; set; }
         /// <summary>
